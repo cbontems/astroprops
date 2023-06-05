@@ -1,0 +1,6 @@
+dist/
+node_modules/
+.netlify/
+.astro/
+public/_redirects
+public/_headers

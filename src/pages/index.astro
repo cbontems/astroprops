@@ -3,29 +3,29 @@ import BaseLayout from "~/layouts/BaseLayout.astro";
 import Card from "~/components/Card.astro";
 const title = "Astro & Open Props Starter";
 const description =
-  "A minimal starter template for creating your next website with Astro and Open Props.";
+	"A minimal starter template for creating your next website with Astro and Open Props.";
 const cta = "Use the template";
 const url = "https://github.com/cbontems/astro-open-props-starter";
 ---
 
 <BaseLayout title={title}>
-  <main>
-    <Card
-      title={title}
-      description={description}
-      ctaText={cta}
-      ctaUrl={url}
-      ctaIcon="github"
-      external={true}
-    />
-  </main>
+	<main>
+		<Card
+			title={title}
+			description={description}
+			ctaText={cta}
+			ctaUrl={url}
+			ctaIcon="github"
+			external={true}
+		/>
+	</main>
 </BaseLayout>
 
 <style>
-  @import "open-props/src/props.media.css";
-  main {
-    min-height: 100dvb;
-    display: grid;
-    place-items: center;
-  }
+	@import "open-props/src/props.media.css";
+	main {
+		min-height: 100dvb;
+		display: grid;
+		place-items: center;
+	}
 </style>
