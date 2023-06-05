@@ -27,7 +27,7 @@
   "bugs": {
     "url": "https://github.com/cbontems/astroprops/issues"
   },
-  "homepage": "https://github.com/cbontems/astroprops#readme",
+  "homepage": "https://astroprops.netlify.app/",
   "dependencies": {
     "@astrojs/sitemap": "1.3.3",
     "astro": "2.5.7",
