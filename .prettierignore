@@ -2,5 +2,7 @@ dist/
 node_modules/
 .netlify/
 .astro/
+.gitignore
+.prettierignore
 public/_redirects
 public/_headers
