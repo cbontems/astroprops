@@ -1,7 +1,7 @@
 {
-  "name": "astro-open-props-starter",
-  "version": "0.0.2",
-  "description": "A starter template to build a website with Astro and Open Props",
+  "name": "astroprops",
+  "version": "0.1.0",
+  "description": "A starter blog template to build a website with Astro and Open Props",
   "main": "index.js",
   "scripts": {
     "build": "astro build",
@@ -12,21 +12,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cbontems/astro-open-props-starter.git"
+    "url": "git+https://github.com/cbontems/astroprops.git"
   },
   "keywords": [
     "Astro",
     "Open",
     "Props",
     "template",
-    "starter"
+    "starter",
+    "blog"
   ],
   "author": "C\u00e9dric Bontems <cedric@thewebforge.dev> (https://thewebforge.dev/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cbontems/astro-open-props-starter/issues"
+    "url": "https://github.com/cbontems/astroprops/issues"
   },
-  "homepage": "https://github.com/cbontems/astro-open-props-starter#readme",
+  "homepage": "https://github.com/cbontems/astroprops#readme",
   "dependencies": {
     "astro": "2.5.7",
     "open-props": "1.5.8",

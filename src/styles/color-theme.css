@@ -1,0 +1,28 @@
+@import "open-props/src/props.media.css";
+
+:where(html) {
+  --link: var(--orange-7);
+  --link-visited: var(--pink-7);
+  --text-1: var(--gray-9);
+  --text-2: var(--gray-7);
+  --surface-1: var(--gray-0);
+  --surface-2: var(--gray-2);
+  --surface-3: var(--gray-3);
+  --surface-4: var(--gray-4);
+  --scrollthumb-color: var(--gray-7);
+  -webkit-text-size-adjust: none;
+  @media (--OSdark) {
+    --link: var(--orange-3);
+    --link-visited: var(--pink-3);
+    --text-1: var(--gray-1);
+    --text-2: var(--gray-4);
+    --surface-1: var(--gray-9);
+    --surface-2: var(--gray-8);
+    --surface-3: var(--gray-7);
+    --surface-4: var(--gray-6);
+    --scrollthumb-color: var(--gray-6);
+    --shadow-strength: 10%;
+    --shadow-color: 220 40% 2%;
+    color-scheme: dark;
+  }
+}
