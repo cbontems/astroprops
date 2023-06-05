@@ -1,6 +1,6 @@
 {
   "name": "astroprops",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A starter blog template to build a website with Astro and Open Props",
   "main": "index.js",
   "scripts": {
@@ -22,7 +22,7 @@
     "starter",
     "blog"
   ],
-  "author": "Cédric Bontems <cedric@thewebforge.dev> (https://thewebforge.dev/)",
+  "author": "C\u00e9dric Bontems <cedric@thewebforge.dev> (https://thewebforge.dev/)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/cbontems/astroprops/issues"
