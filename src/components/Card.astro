@@ -1,0 +1,35 @@
+---
+import type Image from "astro/components/Image.astro";
+import ButtonLink from "~/components/ButtonLink.astro";
+import type BaseLayout from "~/layouts/BaseLayout.astro";
+
+export interface Props {
+	title: string;
+    description: string;
+    ctaText: string;
+    ctaUrl: string;
+    ctaIcon?: string;
+    external?: boolean;
+}
+
+const { title, description, ...rest } = Astro.props;
+---
+
+<article>
+    <h3>{title}</h3>
+    <p>{description}</p>
+    <ButtonLink {...rest} />
+</article>
+
+<style>
+    h3, p {
+        margin-block-end: var(--size-6);
+    }
+    article{
+        background-color: var(--surface-2);
+        padding: var(--size-8);
+        border-radius: var(--radius-2);
+        box-shadow: var(--shadow-4);
+        max-width: var(--content-3);
+    }
+</style>
