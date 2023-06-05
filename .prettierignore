@@ -6,3 +6,4 @@ node_modules/
 .prettierignore
 public/_redirects
 public/_headers
+*.svg
