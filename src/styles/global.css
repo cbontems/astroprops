@@ -1,6 +1,8 @@
 @import "open-props/src/props.media.css";
 @import "~/styles/color-theme.css";
 @import "~/styles/custom-normalize.css";
+@import "~/styles/prose.css";
+
 html {
 	--site-width: 60rem;
 }

@@ -1,1 +1,177 @@
-<p>Individual post template</p>
+---
+import { CollectionEntry, getCollection, getEntryBySlug } from "astro:content";
+import { resolveCoverImage, resolveSocialImage } from "~/helpers/posts";
+import { format } from "date-fns";
+import Layout from "~/layouts/MainLayout.astro";
+import Avatar from "~/components/Avatar.astro";
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+	const posts = await getCollection("blog");
+
+	return posts.map((post) => ({
+		params: { slug: post.slug },
+		props: { post },
+	}));
+}
+
+type Props = {
+	post: CollectionEntry<"blog">;
+};
+
+const { post } = Astro.props;
+
+const posts = await getCollection("blog");
+const { data, render } = post;
+const { Content } = await render();
+
+const coverImage = await resolveCoverImage(post);
+const socialImage = await resolveSocialImage(post);
+
+const authors = await Promise.all(
+	data.authors.map((author) => getEntryBySlug("authors", author)),
+).then((authors) => authors.filter(Boolean) as CollectionEntry<"authors">[]);
+
+const placeholderGradient = `var(--gradient-${
+	Math.floor(Math.random() * 30) + 1
+})`;
+---
+
+<Layout
+	title={data.title}
+	description={data.description}
+	pageType="article"
+	image={socialImage && { src: socialImage.src, alt: data.title }}
+>
+	<div class="container">
+		{
+			coverImage ? (
+				<img
+					src={coverImage.src}
+					width={coverImage.width}
+					height={coverImage.height}
+					loading="lazy"
+					decoding="async"
+					alt={data.coverImageAlt}
+				/>
+			) : (
+				<div class="placeholder-gradient" />
+			)
+		}
+
+		<header>
+			<time datetime={data.publishDate.toISOString()}>
+				{format(data.publishDate, "MMMM d, yyyy")}
+			</time>
+			<h1 class="heading-3 mt-2 mb-4 md:heading-2 sm:mt-3 sm:mb-5">
+				{data.title}
+			</h1>
+			<div class="avatar-row">
+				<span>By</span>
+				{
+					authors.map((author) => {
+						return (
+							<>
+								<Avatar name={author.slug} lg />
+								<span>{author.data.name}</span>
+							</>
+						);
+					})
+				}
+			</div>
+		</header>
+		<hr />
+		<article class="prose">
+			<Content />
+		</article>
+	</div>
+</Layout>
+
+<style define:vars={{ placeholderGradient }}>
+	@import "open-props/src/props.media.css";
+	@import "open-props/gradients";
+
+	header {
+		background-color: var(--surface-1);
+		padding: var(--size-6);
+		margin-inline: auto;
+		inline-size: 100%;
+		text-align: center;
+		max-inline-size: min(var(--size-content-3), 80vi);
+		border-radius: var(--radius-2);
+	}
+	img,
+	div.placeholder-gradient {
+		position: relative;
+		aspect-ratio: var(--ratio-square);
+		object-fit: cover;
+		box-shadow: var(--shadow-2);
+		z-index: -1;
+		clip-path: circle(150% at center -60%);
+		max-inline-size: 100vi;
+		inset-inline-start: 50%;
+		inset-inline-end: 50%;
+		margin-left: -50vi;
+		margin-right: -50vi;
+		margin-block-end: calc(-1 * var(--size-12));
+		@media (--sm-n-above) {
+			margin-block-end: calc(-1 * var(--size-11));
+			aspect-ratio: var(--ratio-landscape);
+			clip-path: circle(200% at center -130%);
+		}
+		@media (--md-n-above) {
+			aspect-ratio: var(--ratio-golden);
+			clip-path: circle(200% at center -170%);
+		}
+		@media (--lg-n-above) {
+			aspect-ratio: var(--ratio-widescreen);
+			inline-size: 100%;
+			max-inline-size: initial;
+			inset-inline-start: initial;
+			inset-inline-end: initial;
+			margin-left: 0;
+			margin-right: 0;
+			clip-path: circle(200% at center -200%);
+			margin-block-end: calc(-1 * var(--size-12));
+		}
+	}
+	div.placeholder-gradient {
+		background-image: var(--placeholderGradient);
+		background-size: cover;
+	}
+	time {
+		font-family: var(--font-mono);
+		color: var(--text-2);
+		opacity: 0.7;
+	}
+	div.avatar-row {
+		font-family: var(--font-mono);
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: var(--size-3);
+		color: var(--text-2);
+	}
+	hr {
+		margin-inline: var(--size-9);
+		background-color: var(--surface-2);
+	}
+</style>
+
+<script>
+	// Remove autoplay from videos when `prefers-reduced-motion: reduce`
+	const autoplayVideos = document.querySelectorAll("video[autoplay]");
+	const prefersReducedMotion = window.matchMedia(
+		"(prefers-reduced-motion: reduce)",
+	).matches;
+
+	if (prefersReducedMotion) {
+		autoplayVideos.forEach((video) => {
+			video.removeAttribute("autoplay");
+			// Add controls attribute so user can still play the video if they want
+			video.setAttribute("controls", "true");
+		});
+	}
+</script>

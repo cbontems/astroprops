@@ -20,6 +20,7 @@ export type SiteInfo = {
 	fathomSiteId?: string;
 	fathom404GoalId?: string;
 	brandColor?: string;
+	postPerPage?: number;
 };
 
 const siteInfo: SiteInfo = {
@@ -58,6 +59,7 @@ const siteInfo: SiteInfo = {
 	fathomSiteId: "MXLWXIIW",
 	fathom404GoalId: "HCBWLVGO",
 	brandColor: "#ff4500",
+	postPerPage: 3,
 };
 
 export default siteInfo;

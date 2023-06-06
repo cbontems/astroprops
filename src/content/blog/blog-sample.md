@@ -5,6 +5,7 @@ publishDate: "May 18, 2023"
 authors:
   - cedric
 coverImage: "/src/content/blog/_images/blog-sample/blog-sample.jpg"
+coverImageAlt: "A beautiful cover image"
 socialImage: "/src/content/blog/_images/blog-sample/blog-sample.jpg"
 lang: "en"
 ---
@@ -17,6 +18,12 @@ We just released Astro 2.5, with a big list of features including:
 - **[HTML minification](#html-minification)**: An option to allow you to minify your Astro templates.
 - **[Parallelized rendering](#parallelized-rendering)**: Astro now runs sibling components in parallel, speeding up rendering when you have multiple components doing their own data loading.
 - **[Polymorphic type helper](#polymorphic-type-helper)**: Define a component that accepts the same props as built-in elements.
+
+## Ordered list
+
+1. f zalv rezamev
+1. f zalv rezamev
+1. f zalv rezamev
 
 ## Data collections and references
 

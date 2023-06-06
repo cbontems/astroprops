@@ -21,6 +21,7 @@ export const collections = {
 			authors: z.array(z.string()),
 			socialImage: z.string().optional(),
 			coverImage: z.string().optional(),
+			coverImageAlt: z.string().optional(),
 			lang: z.enum(["en"]).default("en"),
 			draft: z.boolean().optional(),
 		}),
