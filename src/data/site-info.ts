@@ -42,7 +42,7 @@ const siteInfo: SiteInfo = {
 	],
 	twitterHandle: "cbontems",
 	fathomSiteId: "MXLWXIIW",
-	fathom404GoalId: "",
+	fathom404GoalId: "HCBWLVGO",
 	brandColor: "#ff4500",
 };
 
