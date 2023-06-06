@@ -1,0 +1,31 @@
+---
+import MainLayout from "~/layouts/MainLayout.astro";
+import Card from "~/components/Card.astro";
+const title = "About";
+const description =
+	"A minimal starter template for creating your next website with Astro and Open Props.";
+const cta = "Use the template";
+const url = "https://github.com/cbontems/astro-open-props-starter";
+---
+
+<MainLayout title={title}>
+	<main>
+		<Card
+			title={title}
+			description={description}
+			ctaText={cta}
+			ctaUrl={url}
+			ctaIcon="github"
+			external={true}
+		/>
+	</main>
+</MainLayout>
+
+<style>
+	@import "open-props/src/props.media.css";
+	main {
+		min-height: 100dvb;
+		display: grid;
+		place-items: center;
+	}
+</style>

@@ -5,7 +5,9 @@
     "paths": {
       "~/*": ["./src/*"]
     },
-    "importsNotUsedAsValues": "remove"
+    "importsNotUsedAsValues": "remove",
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js"
   },
   "include": ["**/*", ".eslintrc.cjs"]
 }

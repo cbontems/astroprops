@@ -128,7 +128,7 @@
 	cursor: pointer;
 	touch-action: manipulation;
 }
-:where(a):not(.btn) {
+:where(a):where(:not(.btn)) {
 	margin-block: calc(var(--size-1) * -1);
 	margin-inline: calc(var(--size-1) * -1);
 	padding-block: var(--size-1);

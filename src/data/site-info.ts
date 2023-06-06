@@ -33,6 +33,20 @@ const siteInfo: SiteInfo = {
 	},
 	socialLinks: [
 		{
+			platform: "youtube",
+			href: "https://youtube.com/@cedricbontems",
+			me: "https://youtube.com/@cedricbontems",
+			text: "AstroProps' Youtube demo video",
+			icon: "mdi:youtube",
+		},
+		{
+			platform: "twitter",
+			href: "https://twitter.com/cedricbontems",
+			me: "https://twitter.com/cedricbontems/",
+			text: "Find the author on twitter",
+			icon: "mdi:twitter",
+		},
+		{
 			platform: "github",
 			href: "https://github.com/cbontems/astroprops",
 			me: "https://github.com/cbontems/",

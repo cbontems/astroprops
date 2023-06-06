@@ -22,6 +22,7 @@ export const collections = {
 			socialImage: z.string().optional(),
 			coverImage: z.string().optional(),
 			lang: z.enum(["en"]).default("en"),
+			draft: z.boolean().optional(),
 		}),
 	}),
 };
