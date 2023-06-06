@@ -1,5 +1,5 @@
 ---
-import BaseLayout from "~/layouts/BaseLayout.astro";
+import MainLayout from "~/layouts/MainLayout.astro";
 import Card from "~/components/Card.astro";
 const title = "Astro & Open Props Starter";
 const description =
@@ -8,7 +8,7 @@ const cta = "Use the template";
 const url = "https://github.com/cbontems/astro-open-props-starter";
 ---
 
-<BaseLayout title={title}>
+<MainLayout title={title}>
 	<main>
 		<Card
 			title={title}
@@ -19,7 +19,7 @@ const url = "https://github.com/cbontems/astro-open-props-starter";
 			external={true}
 		/>
 	</main>
-</BaseLayout>
+</MainLayout>
 
 <style>
 	@import "open-props/src/props.media.css";

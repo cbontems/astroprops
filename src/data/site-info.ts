@@ -15,7 +15,11 @@ export type SiteInfo = {
 		src: string;
 		alt: string;
 	};
+	twitterHandle?: string;
 	socialLinks: SocialLink[];
+	fathomSiteId?: string;
+	fathom404GoalId?: string;
+	brandColor?: string;
 };
 
 const siteInfo: SiteInfo = {
@@ -36,6 +40,10 @@ const siteInfo: SiteInfo = {
 			icon: "mdi:github",
 		},
 	],
+	twitterHandle: "cbontems",
+	fathomSiteId: "MXLWXIIW",
+	fathom404GoalId: "",
+	brandColor: "#ff4500",
 };
 
 export default siteInfo;
