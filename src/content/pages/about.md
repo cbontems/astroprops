@@ -1,38 +1,38 @@
 ---
 seo:
-  title: About AstroProps
+  title: About
   description: All about AstroProps starter blog theme for Astro
 updated_date: 2023-06-07
 ---
 
-AstroPaper is a minimal, responsive and SEO-friendly Astro blog theme. I designed and crafted this based on [my personal blog](https://satnaing.dev/blog).
-
-This theme is aimed to be accessible out of the box. Light and dark mode are supported by
-default and additional color schemes can also be configured.
-
-This theme is self-documented \_ which means articles/posts in this theme can also be considered as documentations. So, see the documentation for more info.
-
-<div>
-  <img src="/assets/dev.svg" class="sm:w-1/2 mx-auto" alt="coding dev illustration">
-</div>
-
-## Tech Stack
-
-This theme is written in vanilla JavaScript (+ TypeScript for type checking) and a little bit of ReactJS for some interactions. TailwindCSS is used for styling; and Markdown is used for blog contents.
+AstroProps is a starter blog theme designed for [Astro](/astro), a modern static site builder.
 
 ## Features
 
-Here are certain features of this site.
+- **Accessibility**: The theme is built with accessibility in mind, ensuring that your blog is usable by a wide range of users.
+- **Light and Dark Mode**: Supports both light and dark modes by default, providing a pleasant reading experience for your visitors.
+- **Customizable Color Schemes**: Easily configure additional color schemes to match your personal style or brand.
+- **Responsive Design**: The theme is fully responsive, ensuring that your blog looks great on all devices and screen sizes.
+- **SEO-Friendly**: Designed with search engine optimization in mind, helping your blog rank higher in search results.
+- **Fuzzy Search**: Enables users to quickly search for articles with a fuzzy search functionality.
+- **Super Fast Performance**: Optimized for performance to provide a smooth browsing experience for your visitors.
+- **Draft Posts**: Easily mark posts as drafts to work on them privately before publishing.
+- **Pagination**: Supports pagination for long lists of blog posts, improving navigation for readers.
+- **Sitemap & RSS Feed**: Generates a sitemap and RSS feed to help search engines discover and index your content.
+- **Highly Customizable**: Offers extensive customization options to tailor the theme to your specific needs.
 
-- fully responsive and accessible
-- SEO-friendly
-- light & dark mode
-- fuzzy search
-- super fast performance
-- draft posts
-- pagination
-- sitemap & rss feed
-- highly customizable
+## Tech Stack
 
-If you like this theme, you can star/contribute to the [repo](https://github.com/satnaing/astro-paper).  
-Or you can even give any feedback via my [email](mailto:contact@satnaing.dev).
+This theme is built using the following technologies:
+
+- **JavaScript**: The theme is written in vanilla JavaScript, with TypeScript used for type checking.
+- **SolidJS**: Utilizes SolidJS mobile menu interactions to enhance the user experience.
+- **Open Props**: Employs Open Props for styling, providing a flexible and CSS props first approach.
+- **Markdown**: Uses Markdown for writing and managing blog content.
+
+## Get Involved
+
+If you like this theme and find it useful, you can show your support by starring or contributing to the [GitHub repository](/repo).  
+Feel free to share any feedback or suggestions by contacting me via [email](mailto:hello@thewebforge.dev).
+
+![Coding](https://doodleipsum.com/700/hand-drawn?i=5bce67149b2466b121831ce7b140a39d)

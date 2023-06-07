@@ -11,3 +11,8 @@ export const getCategories = (posts: CollectionEntry<"blog">[]) => {
 	});
 	return categories.sort();
 };
+
+export const getPostsByCategory = (
+	posts: CollectionEntry<"blog">[],
+	category: string,
+) => posts.filter((post) => post.data.categories.includes(category));

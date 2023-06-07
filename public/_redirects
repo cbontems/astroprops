@@ -6,7 +6,9 @@
 /remark-toc             https://github.com/remarkjs/remark-toc
 
 # Project GitHub destinations
-/repo                   https://github.com/cbontems/astroprops
-/issues                 https://github.com/cbontems/astroprops/issues/new/choose
 /changelog              https://github.com/cbontems/astroprops/releases/            301
+/contributors           https://github.com/cbontems/astroprops/graphs/contributors
+/issues                 https://github.com/cbontems/astroprops/issues/new/choose
+/license                https://github.com/cbontems/astroprops/blob/main/LICENSE
 /releases/:v            https://github.com/cbontems/astroprops/releases/tag/v:v     301
+/repo                   https://github.com/cbontems/astroprops

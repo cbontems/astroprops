@@ -1,5 +1,5 @@
 ---
-title: "Astro 2.5"
+title: "AstroProps 0.6"
 description: "Data collections • Hybrid rendering • Custom client directives • HTML minification • Parallelized rendering • Polymorphic type helper • More!"
 publishDate: "May 18, 2023"
 authors:
