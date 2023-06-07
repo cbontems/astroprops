@@ -1,0 +1,12 @@
+# Vendor Redirects
+/astro                  https://astro.build
+/astro-doc              https://docs.astro.build/en/getting-started/
+/usefathom              https://usefathom.com/ref/GDDKYS
+/remark-collapse        https://github.com/Rokt33r/remark-collapse
+/remark-toc             https://github.com/remarkjs/remark-toc
+
+# Project GitHub destinations
+/repo                   https://github.com/cbontems/astroprops
+/issues                 https://github.com/cbontems/astroprops/issues/new/choose
+/changelog              https://github.com/cbontems/astroprops/releases/            301
+/releases/:v            https://github.com/cbontems/astroprops/releases/tag/v:v     301

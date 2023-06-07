@@ -54,12 +54,19 @@ const siteInfo: SiteInfo = {
 			text: "Go to AstroProps' GitHub repo",
 			icon: "mdi:github",
 		},
+		{
+			platform: "feed",
+			href: "/feed.xml",
+			text: "Subscribe to our RSS feed",
+			icon: "mdi:rss",
+			footerOnly: true,
+		},
 	],
 	twitterHandle: "cbontems",
 	fathomSiteId: "MXLWXIIW",
 	fathom404GoalId: "HCBWLVGO",
 	brandColor: "#ff4500",
-	postPerPage: 3,
+	postPerPage: 5,
 };
 
 export default siteInfo;

@@ -2,6 +2,7 @@
 import { Icon } from "astro-icon";
 import HeaderDrawerContent from "~/components/HeaderDrawerContent.astro";
 import HeaderNav from "~/components/HeaderNav.astro";
+import SchemeToggle from "~/components/SchemeToggle.astro";
 ---
 
 <header id="nav">
@@ -11,6 +12,7 @@ import HeaderNav from "~/components/HeaderNav.astro";
 			<Icon name="mdi:menu" />
 			<span class="sr-only">Show Menu</span>
 		</button>
+		<SchemeToggle />
 	</nav>
 	<div id="astroprops-drawer" style="display: none;">
 		<HeaderDrawerContent />

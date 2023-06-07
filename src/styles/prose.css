@@ -67,6 +67,9 @@
 	& li {
 		margin-top: 0.5rem;
 		margin-bottom: 0.5rem;
+		& p {
+			display: inline;
+		}
 	}
 	& sup > :where(a) {
 		font-weight: var(--font-weight-9);
