@@ -8,6 +8,7 @@ module.exports = {
 		postcssImport(),
 		postcssJitProps({
 			...OpenProps,
+			custom_selector: "html",
 		}),
 		postcssPresetEnv({
 			stage: 0,

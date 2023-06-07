@@ -103,10 +103,21 @@ const placeholderGradient = `var(--gradient-${
 		opacity: 0.7;
 	}
 	hr {
-		margin-inline: var(--size-9);
+		max-inline-size: var(--size-header-1);
+		margin-inline: auto;
 		margin-block-start: var(--size-4);
 		margin-block-end: var(--size-9);
 		background-color: var(--link);
-		opacity: 0.2;
+		overflow: visible;
+		text-align: center;
+		line-height: var(--border-size-1);
+
+		&::after {
+			content: "×";
+			color: var(--link);
+			display: inline;
+			background-color: var(--surface-1);
+			padding-inline: var(--size-1);
+		}
 	}
 </style>

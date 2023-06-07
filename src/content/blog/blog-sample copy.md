@@ -4,6 +4,10 @@ description: "Data collections • Hybrid rendering • Custom client directives
 publishDate: "May 18, 2023"
 authors:
   - cedric
+categories:
+  - html
+  - api
+  - javascript
 coverImage: "/src/content/blog/_images/blog-sample/blog-sample.jpg"
 coverImageAlt: "A beautiful cover image"
 socialImage: "/src/content/blog/_images/blog-sample/blog-sample.jpg"

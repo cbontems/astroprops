@@ -19,6 +19,7 @@ export const collections = {
 				.or(z.date())
 				.transform((val) => new Date(val)),
 			authors: z.array(z.string()),
+			categories: z.array(z.string()).default(["others"]),
 			socialImage: z.string().optional(),
 			coverImage: z.string().optional(),
 			coverImageAlt: z.string().optional(),

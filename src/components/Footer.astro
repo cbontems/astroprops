@@ -3,7 +3,6 @@ import siteInfo from "~/data/site-info.js";
 import SocialLinks from "./SocialLinks.astro";
 
 const socialLinks = siteInfo.socialLinks;
-const footerLinks = siteInfo.footerLinks;
 ---
 
 <footer class="container">
@@ -28,6 +27,10 @@ const footerLinks = siteInfo.footerLinks;
 
 <style>
 	@import "open-props/src/props.media.css";
+
+	footer {
+		margin-block-start: auto;
+	}
 	nav {
 		display: grid;
 		grid-template-columns: 1fr auto;

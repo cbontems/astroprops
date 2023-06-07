@@ -20,16 +20,20 @@ const { ...head } = Astro.props;
 		<Header />
 		<slot />
 		<Footer />
-	</body><style>
-		html.disclosure-open {
-			overflow-y: hidden;
-		}
+		<style>
+			html.disclosure-open {
+				overflow-y: hidden;
+			}
 
-		html.disclosure-open #nav {
-			overflow-y: auto;
-		}
-		body {
-			overflow-x: hidden;
-		}
-	</style>
+			html.disclosure-open #nav {
+				overflow-y: auto;
+			}
+			body {
+				overflow-x: hidden;
+				display: flex;
+				flex-direction: column;
+				min-height: 100dvb;
+			}
+		</style>
+	</body>
 </html>
