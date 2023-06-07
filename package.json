@@ -1,6 +1,6 @@
 {
   "name": "astroprops",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "A starter blog template to build a website with Astro and Open Props",
   "main": "index.js",
   "scripts": {
