@@ -16,7 +16,7 @@
 	--surface-2-hsl: var(--gray-2-hsl);
 	--surface-3-hsl: var(--gray-3-hsl);
 	--surface-4-hsl: var(--gray-4-hsl);
-	--scrollthumb-color: var(--gray-7);
+	--scrollthumb-color: var(--orange-7);
 	-webkit-text-size-adjust: none;
 	@media (--OSdark) {
 		--brand: var(--orange-3);
@@ -34,7 +34,7 @@
 		--surface-2-hsl: var(--gray-8-hsl);
 		--surface-3-hsl: var(--gray-7-hsl);
 		--surface-4-hsl: var(--gray-6-hsl);
-		--scrollthumb-color: var(--gray-6);
+		--scrollthumb-color: var(--orange-6);
 		--shadow-strength: 10%;
 		--shadow-color: 220 40% 2%;
 		color-scheme: dark;

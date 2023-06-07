@@ -1,17 +1,15 @@
+/* This file complements Normalize for narkup rendered content */
+
 .prose {
-	font-size: var(--font-size-fluid-1);
-	line-height: var(--font-lineheight-4);
-	font-weight: 300;
 	margin-inline: auto;
-	width: 100%;
-	max-width: var(--size-content-3);
+	inline-size: 100%;
+	max-inline-size: var(--size-content-3);
 	letter-spacing: var(--font-letterspacing-1);
 	color: var(--text-2);
 
 	& > p {
 		margin-top: var(--size-3);
 		margin-bottom: var(--size-3);
-		max-inline-size: inherit;
 	}
 
 	& > hr {
@@ -22,20 +20,11 @@
 	& > h2 {
 		margin-top: var(--size-8);
 		margin-bottom: var(--size-3);
-		font-size: var(--font-size-fluid-2);
-		font-weight: var(--font-weight-4);
-		--tw-text-opacity: 1;
-		color: var(--text-1);
 	}
 
 	& h3 {
 		margin-top: var(--size-8);
 		margin-bottom: var(--size-3);
-		font-family: var(--font-sans);
-		font-size: var(--font-size-fluid-1);
-		line-height: var(--size-7);
-		font-weight: var(--font-weight-4);
-		color: var(--text-1);
 	}
 
 	& > img {
@@ -48,80 +37,87 @@
 
 	& ul {
 		margin-block: var(--size-3);
-		padding-inline-start: var(--size-7);
 		list-style-type: none;
 
 		& li {
-			max-inline-size: inherit;
 			&:before {
-				content: "✨";
+				content: "⦿";
 				display: inline-block;
-				width: 10px;
-				height: 10px;
-				margin-right: 18px;
-				margin-left: -28px;
+				color: var(--brand);
+				inline-size: var(--size-2);
+				block-size: var(--size-2);
+				margin-inline-end: var(--size-3);
+				margin-inline-start: calc(-1 * var(--size-5));
 			}
 		}
 	}
-}
 
-.prose ol {
-	margin-top: var(--size-3);
-	margin-bottom: var(--size-3);
-	list-style-position: inside;
-	list-style-type: decimal;
-	padding-inline-start: var(--size-3);
-}
+	& ol {
+		margin-top: var(--size-3);
+		margin-bottom: var(--size-3);
+		list-style-type: decimal;
 
-.prose ol ::marker {
-	display: inline-block;
-	font-family: var(--font-mono);
-	font-weight: var(--font-weight-7);
-	color: var(--brand);
-}
-
-.prose li {
-	margin-top: 0.5rem;
-	margin-bottom: 0.5rem;
-}
-
-.prose :where(a) {
-	display: inline-block;
-	font-weight: var(--font-weight-7);
-	color: var(--link);
-	text-decoration-line: underline;
-	text-underline-offset: 2px;
-}
-
-.prose :where(a):hover {
-	text-decoration-line: none;
-}
-
-.prose > p code {
-	margin-left: 0.125rem;
-	margin-right: 0.125rem;
-	display: inline-block;
-	border-radius: 0.5rem;
-	--tw-bg-opacity: 1;
-	background-color: rgb(52 56 65 / var(--tw-bg-opacity));
-	padding-left: 0.5rem;
-	padding-right: 0.5rem;
-	vertical-align: baseline;
-	font-size: 0.875rem;
-	line-height: 1.5rem;
-	--tw-text-opacity: 1;
-	color: rgb(242 246 250 / var(--tw-text-opacity));
-}
-
-.prose > pre {
-	margin-top: 1.5rem;
-	margin-bottom: 1.5rem;
-	border-radius: 0.375rem;
-	border-width: 1px;
-	--tw-border-opacity: 1;
-	border-color: rgb(84 88 100 / var(--tw-border-opacity));
-	background-color: transparent;
-	padding: 0.75rem 1.25rem;
-	font-size: 0.875rem;
-	line-height: 1.25rem;
+		& ::marker {
+			display: inline-block;
+			font-family: var(--font-mono);
+			font-weight: var(--font-weight-7);
+			color: var(--brand);
+		}
+	}
+	& li {
+		margin-top: 0.5rem;
+		margin-bottom: 0.5rem;
+	}
+	& sup > :where(a) {
+		font-weight: var(--font-weight-9);
+		&::before,
+		&::after {
+			font-weight: var(--font-weight-4);
+			content: "( ";
+		}
+		&::after {
+			content: " )";
+		}
+	}
+	& .footnotes {
+		margin-block: var(--size-9);
+		padding-block: var(--size-2);
+		border: var(--border-size-1) dotted var(--surface-3);
+		border-radius: var(--radius-2);
+		& * {
+			font-size: var(--font-size-0);
+			font-style: italic;
+		}
+	}
+	& > pre {
+		max-inline-size: initial;
+		margin-block: var(--size-5);
+		border-radius: var(--radius-2);
+		border-width: var(--border-size-1);
+		border-color: var(--surface-3);
+		background-color: transparent;
+		padding: var(--size-2) var(--size-4);
+		font-size: 85%;
+		line-height: var(--font-lineheight-3);
+	}
+	& > table {
+		width: 100%;
+		table-layout: auto;
+		text-align: left;
+		margin-top: 2em;
+		margin-bottom: 2em;
+		font-size: 0.875em;
+		line-height: 1.7142857;
+		text-indent: 0;
+		border-collapse: collapse;
+		& th,
+		td {
+			padding: var(--size-2) var(--size-4);
+			border-width: 1px;
+			border-color: var(--surface-2);
+		}
+		& tbody > tr:nth-child(odd) {
+			background-color: hsl(var(--surface-2-hsl) / 20%);
+		}
+	}
 }

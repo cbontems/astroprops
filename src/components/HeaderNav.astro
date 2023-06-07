@@ -40,11 +40,13 @@ const socialLinks = siteInfo.socialLinks.filter((link) => !link.footerOnly);
 
 	a {
 		color: var(--text-2);
+		opacity: 0.7;
 		&:visited {
 			color: var(--text-2);
 		}
 		&:hover {
 			color: var(--text-1);
+			opacity: 1;
 			text-decoration: none;
 		}
 	}

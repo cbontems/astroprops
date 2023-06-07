@@ -4,6 +4,7 @@ import { resolveCoverImage, resolveSocialImage } from "~/helpers/posts";
 import { format } from "date-fns";
 import Layout from "~/layouts/MainLayout.astro";
 import Avatar from "~/components/Avatar.astro";
+import HistoryBackButton from "~/components/HistoryBackButton.astro";
 
 export const prerender = true;
 
@@ -61,6 +62,7 @@ const placeholderGradient = `var(--gradient-${
 		}
 
 		<header>
+			<HistoryBackButton text="Back" />
 			<time datetime={data.publishDate.toISOString()}>
 				{format(data.publishDate, "MMMM d, yyyy")}
 			</time>
@@ -156,7 +158,10 @@ const placeholderGradient = `var(--gradient-${
 	}
 	hr {
 		margin-inline: var(--size-9);
-		background-color: var(--surface-2);
+		margin-block-start: var(--size-4);
+		margin-block-end: var(--size-9);
+		background-color: var(--link);
+		opacity: 0.2;
 	}
 </style>
 

@@ -9,7 +9,7 @@
 	color: var(--text-2);
 	color-scheme: light;
 	font-family: var(--font-sans);
-	line-height: var(--font-lineheight-3);
+	line-height: var(--font-lineheight-4);
 	scrollbar-color: var(--scrollthumb-color) transparent;
 	&:where(dialog) {
 		background-color: var(--surface-1);
@@ -79,10 +79,11 @@
 	min-block-size: 100%;
 }
 :where(h1, h2, h3, h4, h5, h6) {
-	font-weight: var(--font-weight-9);
+	font-weight: var(--font-weight-7);
 	line-height: var(--font-lineheight-1);
 }
 :where(h1) {
+	font-weight: var(--font-weight-9);
 	font-size: var(--font-size-fluid-3);
 	max-inline-size: var(--size-header-1);
 }
@@ -203,6 +204,7 @@
 	background: var(--surface-2);
 	border-radius: var(--radius-2);
 	padding: var(--size-1) var(--size-2);
+	margin-inline: var(--size-1);
 	writing-mode: lr;
 }
 :where(kbd, var) {
@@ -238,8 +240,8 @@
 	max-inline-size: var(--size-content-1);
 }
 :where(hr) {
-	background-color: var(--surface-3);
-	height: var(--border-size-2);
+	background-color: var(--surface-2);
+	height: var(--border-size-1);
 	margin-block: var(--size-fluid-5);
 }
 :where(figure) {
@@ -252,6 +254,7 @@
 }
 :where(blockquote, :not(blockquote) > cite) {
 	border-inline-start-width: var(--border-size-3);
+	border-color: var(--brand);
 }
 :where(blockquote) {
 	display: grid;
