@@ -2,7 +2,7 @@ import type { ImageMetadata } from "@astrojs/image/dist/vite-plugin-astro-image.
 import type { CollectionEntry } from "astro:content";
 import siteInfo from "~/data/site-info";
 
-export const getSortedPosts = (posts: CollectionEntry<"blog">[]) =>
+export const sortPosts = (posts: CollectionEntry<"blog">[]) =>
 	posts
 		.filter(({ data }) => !data.draft)
 		.sort(
