@@ -6,12 +6,10 @@ import siteInfo from "~/data/site-info";
 import HistoryBackButton from "~/components/HistoryBackButton.astro";
 
 import { getCategories } from "~/helpers/categories";
-import Search from "~/components/Search.astro";
 import StyledHr from "~/components/StyledHr.astro";
 
 const posts = await getCollection("blog");
-
-let categories = getCategories(posts);
+const categories = getCategories(posts);
 
 const placeholderGradient = `var(--gradient-${
 	Math.floor(Math.random() * 30) + 1
@@ -27,8 +25,8 @@ const placeholderGradient = `var(--gradient-${
 		<div class="placeholder-gradient"></div>
 		<header>
 			<HistoryBackButton text="Back" />
-			<h1>All Categories</h1>
-			<p>Search posts by category.</p>
+			<h1>Posts categories</h1>
+			<p>Browse all posts for the selected category.</p>
 		</header>
 		<StyledHr rand />
 
@@ -41,11 +39,6 @@ const placeholderGradient = `var(--gradient-${
 				))
 			}
 		</ul>
-		<!-- <Search
-		id="catalogsearch"
-		selector="#catalog li"
-		groupSelector="#catalog > section"
-		placeholder="search" /> -->
 	</div>
 </Layout>
 
@@ -53,7 +46,7 @@ const placeholderGradient = `var(--gradient-${
 	@import "open-props/src/props.media.css";
 	@import "open-props/gradients";
 	ul {
-		max-inline-size: var(--size-content-2);
+		max-inline-size: var(--size-content-3);
 		margin-inline: auto;
 		list-style: none;
 		display: flex;
@@ -64,6 +57,9 @@ const placeholderGradient = `var(--gradient-${
 		padding-inline-start: 0;
 		margin-block-start: 0;
 		margin-block-end: 0;
+		&:nth-of-type(2) {
+			gap: var(--size-9);
+		}
 	}
 	li {
 		max-inline-size: initial;

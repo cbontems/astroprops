@@ -8,11 +8,11 @@ import SchemeToggle from "~/components/SchemeToggle.astro";
 <header id="nav">
 	<nav aria-label="Primary" class="container">
 		<HeaderNav />
+		<SchemeToggle />
 		<button id="astroprops-drawer-trigger" type="button">
 			<Icon name="mdi:menu" />
 			<span class="sr-only">Show Menu</span>
 		</button>
-		<SchemeToggle />
 	</nav>
 	<div id="astroprops-drawer" style="display: none;">
 		<HeaderDrawerContent />

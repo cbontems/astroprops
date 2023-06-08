@@ -1,6 +1,6 @@
 ---
 title: "Astro 2.5"
-description: "Data collections • Hybrid rendering • Custom client directives • HTML minification • Parallelized rendering • Polymorphic type helper • More!"
+description: "Bonjour Data collections • Hybrid rendering • Custom client directives • HTML minification • Parallelized rendering • Polymorphic type helper • More!"
 publishDate: "May 18, 2023"
 authors:
   - cedric
@@ -17,6 +17,8 @@ lang: "en"
 ## Table of Contents
 
 ## Intro
+
+Bonjour
 
 - grezh(ezr)
   - grezh(ezr)

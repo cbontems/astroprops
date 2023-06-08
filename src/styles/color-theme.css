@@ -9,14 +9,15 @@
 	--link-visited: var(--pink-7);
 	--text-1: var(--gray-9);
 	--text-2: var(--gray-7);
+	--input-color: var(--gray-12);
 	--surface-1: var(--gray-2);
 	--surface-2: var(--gray-1);
 	--surface-3: var(--gray-3);
 	--surface-4: var(--gray-4);
-	--surface-1-hsl: var(--gray-2-hsl);
+	--surface-1-hsl: var(--gray-3-hsl);
 	--surface-2-hsl: var(--gray-1-hsl);
-	--surface-3-hsl: var(--gray-3-hsl);
-	--surface-4-hsl: var(--gray-4-hsl);
+	--surface-3-hsl: var(--gray-4-hsl);
+	--surface-4-hsl: var(--gray-5-hsl);
 	--scrollthumb-color: var(--orange-7);
 	--shadow-strength: 1% !important;
 
@@ -29,6 +30,7 @@
 		--link-visited: var(--pink-3);
 		--text-1: var(--gray-1);
 		--text-2: var(--gray-3);
+		--input-color: var(--gray-12);
 		--surface-1: var(--gray-9);
 		--surface-2: var(--gray-8);
 		--surface-3: var(--gray-7);
@@ -53,10 +55,11 @@
 	--link-visited: var(--pink-7);
 	--text-1: var(--gray-9);
 	--text-2: var(--gray-7);
-	--surface-1: var(--gray-2);
+	--input-color: var(--surface-2);
+	--surface-1: var(--gray-3);
 	--surface-2: var(--gray-1);
-	--surface-3: var(--gray-3);
-	--surface-4: var(--gray-4);
+	--surface-3: var(--gray-4);
+	--surface-4: var(--gray-5);
 	--surface-1-hsl: var(--gray-2-hsl);
 	--surface-2-hsl: var(--gray-1-hsl);
 	--surface-3-hsl: var(--gray-3-hsl);
@@ -74,6 +77,7 @@
 	--link-visited: var(--pink-3);
 	--text-1: var(--gray-1);
 	--text-2: var(--gray-3);
+	--input-color: var(--gray-12);
 	--surface-1: var(--gray-9);
 	--surface-2: var(--gray-8);
 	--surface-3: var(--gray-7);
