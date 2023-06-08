@@ -1,7 +1,7 @@
 ---
-title: "AstroProps 0.6"
+title: "AstroProps 0.6 with a vry very very long title"
 description: "Data collections • Hybrid rendering • Custom client directives • HTML minification • Parallelized rendering • Polymorphic type helper • More!"
-publishDate: "May 18, 2023"
+publishDate: "June 4, 2023"
 authors:
   - cedric
 categories:

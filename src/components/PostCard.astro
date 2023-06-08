@@ -18,7 +18,7 @@ const image = await resolveCoverImage(post);
 		<hgroup>
 			<h3>{post.data.title}</h3>
 			<time datetime={post.data.publishDate.toISOString()}>
-				{format(post.data.publishDate, "MMMM d, yyyy")}
+				{format(post.data.publishDate, "MMMM dd, yyyy")}
 			</time>
 		</hgroup>
 
@@ -29,7 +29,7 @@ const image = await resolveCoverImage(post);
 					alt={post.data.title}
 					sizes="(max-width: 768px) 100vw, 768px"
 					widths={[240, 360, 480, 768]}
-					aspectRatio="4:1"
+					aspectRatio="16:9"
 					fit="cover"
 					position="entropy"
 					loading="lazy"
@@ -42,30 +42,37 @@ const image = await resolveCoverImage(post);
 </article>
 
 <style>
+	@import "open-props/src/props.media.css";
+
 	article {
 		inline-size: 100%;
 		max-inline-size: var(--size-content-3);
-		margin-inline: auto;
+		margin: 0;
 		padding: 0;
 		background-color: var(--surface-2);
 		border-radius: var(--radius-2);
+		height: 100%;
 	}
 	hgroup {
 		display: flex;
-		align-items: center;
+		align-items: flex-start;
 		justify-content: space-between;
 		gap: var(--size-4);
 		padding: var(--size-4);
 	}
 	a {
 		display: block;
+		margin: 0;
+		padding: 0;
 		text-decoration: none;
 		color: inherit;
 	}
 	time {
 		font-family: var(--font-mono);
+		font-size: var(--font-size-0);
 		color: var(--text-2);
 		opacity: 0.7;
+		flex-shrink: 0;
 	}
 	h3 {
 		marginmargin: 0;

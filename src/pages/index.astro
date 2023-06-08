@@ -4,7 +4,7 @@ import { sortPosts } from "../helpers/posts";
 import siteInfo from "~/data/site-info";
 import Layout from "~/layouts/MainLayout.astro";
 import ButtonLink from "~/components/ButtonLink.astro";
-import PostPreview from "~/components/PostPreview.astro";
+import PostCard from "~/components/PostCard.astro";
 import StyledHr from "~/components/StyledHr.astro";
 
 const posts = await getCollection("blog");
@@ -55,11 +55,14 @@ const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 					<section id="featured">
 						<h2>Featured Posts</h2>
 						<ul>
-							{featuredPosts.map((post) => (
-								<li>
-									<PostPreview post={post} />
-								</li>
-							))}
+							{featuredPosts.map(
+								(post, index) =>
+									index < siteInfo.featuredPosts && (
+										<li>
+											<PostCard post={post} />
+										</li>
+									),
+							)}
 						</ul>
 					</section>
 					<StyledHr rand />
@@ -73,9 +76,9 @@ const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 				{
 					sortedPosts.map(
 						(post, index) =>
-							index < 4 && (
+							index < siteInfo.recentPosts && (
 								<li>
-									<PostPreview post={post} />
+									<PostCard post={post} />
 								</li>
 							),
 					)
@@ -86,6 +89,8 @@ const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 </Layout>
 
 <style>
+	@import "open-props/src/props.media.css";
+
 	#hero {
 		display: flex;
 		flex-direction: column;
@@ -97,18 +102,19 @@ const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 		gap: var(--size-6);
 	}
 	ul {
-		max-inline-size: var(--size-content-3);
 		margin-inline: auto;
 		list-style: none;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-wrap: wrap;
-		gap: var(--size-9);
+		display: grid;
+		justify-items: stretch;
+		gap: var(--size-6);
 		padding-inline-start: 0;
-		margin-block: var(--size-9);
+		margin-block: var(--size-6);
+		@media (--md-n-above) {
+			grid-template-columns: repeat(2, 1fr);
+		}
 	}
 	li {
+		padding: 0;
 		max-inline-size: initial;
 	}
 </style>
