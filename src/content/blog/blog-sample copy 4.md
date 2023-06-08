@@ -12,6 +12,7 @@ coverImage: "/src/content/blog/_images/blog-sample/blog-sample.jpg"
 coverImageAlt: "A beautiful cover image"
 socialImage: "/src/content/blog/_images/blog-sample/blog-sample.jpg"
 lang: "en"
+featured: true
 ---
 
 ## Table of Contents

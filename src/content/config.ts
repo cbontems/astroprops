@@ -24,6 +24,7 @@ export const collections = {
 			coverImage: z.string().optional(),
 			coverImageAlt: z.string().optional(),
 			lang: z.enum(["en"]).default("en"),
+			featured: z.boolean().optional(),
 			draft: z.boolean().optional(),
 		}),
 	}),
