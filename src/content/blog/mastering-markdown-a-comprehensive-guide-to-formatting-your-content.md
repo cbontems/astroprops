@@ -298,7 +298,7 @@ Markdown also allows you to use HTML code within your Markdown files for more ad
 - **Markdown Editors**: Some popular Markdown editors include Atom, Visual Studio Code, Typora, and Ghost.
 - **Online Editors**: Websites like Dillinger, StackEdit, and Markdown Live Preview provide online Markdown editing and previewing.
 - **Cheat Sheets**: Markdown cheat sheets offer quick references to Markdown syntax and can be handy while learning or writing Markdown.
-- **Documentation**: The official Markdown documentation (https://daringfireball.net/projects/markdown/) provides detailed information about Markdown syntax.
+- **Documentation**: The official [Markdown documentation](https://daringfireball.net/projects/markdown/) provides detailed information about Markdown syntax.
 
 Feel free to explore these tips, shortcuts, and resources to enhance your Markdown editing experience.
 
