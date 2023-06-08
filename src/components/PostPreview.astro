@@ -2,6 +2,7 @@
 import { type CollectionEntry } from "astro:content";
 import { format } from "date-fns";
 import { resolveCoverImage } from "~/helpers/posts";
+import { Image, Picture } from "@astrojs/image/components";
 
 export type Props = {
 	post: CollectionEntry<"blog">;
@@ -23,11 +24,14 @@ const image = await resolveCoverImage(post);
 
 		{
 			image && (
-				<img
+				<Picture
 					src={image.src}
-					width={image.width}
-					height={image.height}
 					alt={post.data.title}
+					sizes="(max-width: 768px) 100vw, 768px"
+					widths={[240, 360, 480, 768]}
+					aspectRatio="4:1"
+					fit="cover"
+					position="entropy"
 					loading="lazy"
 					decoding="async"
 				/>
@@ -65,11 +69,6 @@ const image = await resolveCoverImage(post);
 	}
 	h3 {
 		marginmargin: 0;
-	}
-	img {
-		aspect-ratio: var(--ratio-ultrawide);
-		width: 100%;
-		object-fit: cover;
 	}
 	p {
 		padding: var(--size-4);

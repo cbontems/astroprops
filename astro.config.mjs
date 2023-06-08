@@ -13,7 +13,14 @@ const toc = (str) => {
 // https://astro.build/config
 export default defineConfig({
 	site: "https://astroprops.netlify.app/",
-	integrations: [robotsTxt(), sitemap(), image(), solidJs()],
+	integrations: [
+		robotsTxt(),
+		sitemap(),
+		image({
+			serviceEntryPoint: "@astrojs/image/sharp",
+		}),
+		solidJs(),
+	],
 	markdown: {
 		remarkPlugins: [
 			remarkToc,
