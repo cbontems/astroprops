@@ -20,19 +20,19 @@ const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 >
 	<main class="container">
 		<section id="hero">
-			<h1>Bienvenue!</h1>
+			<h1>An Astro + Open Props template</h1>
 			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-				veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-				commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-				velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-				occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-				mollit anim id est laborum.
+				Welcome to AstroProps, where minimal design meets effortless
+				customization. This responsive, SEO-friendly Astro blog theme styled
+				with Open Props offers a sleek aesthetic and takes care of complex
+				configurations for you. With AstroProps, focus on creating exceptional
+				content without the hassle. Enjoy built-in light and dark mode support,
+				ensuring a delightful reading experience for your visitors. Unlock your
+				blog's full potential effortlessly with AstroProps.
 			</p>
 			<div>
 				<ButtonLink
-					ctaText="Create your own blog"
+					ctaText="Create your own AstroProps blog"
 					ctaUrl="/repo/"
 					ctaIcon="github"
 					external={false}
@@ -99,7 +99,12 @@ const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 	}
 	div {
 		display: flex;
+		flex-direction: column;
 		gap: var(--size-6);
+		@media (--md-n-above) {
+			flex-direction: row;
+			align-items: center;
+		}
 	}
 	ul {
 		margin-inline: auto;

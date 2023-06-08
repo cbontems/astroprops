@@ -27,7 +27,7 @@ const image = await resolveCoverImage(post);
 				<Picture
 					src={image.src}
 					alt={post.data.title}
-					sizes="(max-width: 768px) 100vw, 768px"
+					sizes="(max-width: 768px) 100vw, 480px"
 					widths={[240, 360, 480, 768]}
 					aspectRatio="16:9"
 					fit="cover"
