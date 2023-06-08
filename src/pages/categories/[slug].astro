@@ -5,6 +5,7 @@ import HistoryBackButton from "~/components/HistoryBackButton.astro";
 import { getCategories, getPostsByCategory } from "~/helpers/categories";
 import siteInfo from "~/data/site-info";
 import PostPreview from "~/components/PostPreview.astro";
+import StyledHr from "~/components/StyledHr.astro";
 
 export async function getStaticPaths() {
 	const posts = await getCollection("blog");
@@ -42,7 +43,7 @@ const placeholderGradient = `var(--gradient-${
 			<h1>{category}</h1>
 			<p>Browse all posts in <br />the {category} category.</p>
 		</header>
-		<hr />
+		<StyledHr rand />
 
 		<ul>
 			{
@@ -122,12 +123,5 @@ const placeholderGradient = `var(--gradient-${
 		font-family: var(--font-mono);
 		color: var(--text-2);
 		opacity: 0.7;
-	}
-	hr {
-		margin-inline: var(--size-9);
-		margin-block-start: var(--size-4);
-		margin-block-end: var(--size-9);
-		background-color: var(--link);
-		opacity: 0.2;
 	}
 </style>

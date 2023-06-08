@@ -2,9 +2,11 @@
 import { CollectionEntry, getCollection, getEntryBySlug } from "astro:content";
 import { resolveCoverImage, resolveSocialImage } from "~/helpers/posts";
 import { format } from "date-fns";
+import { Picture } from "@astrojs/image/components";
 import Layout from "~/layouts/MainLayout.astro";
 import Avatar from "~/components/Avatar.astro";
 import HistoryBackButton from "~/components/HistoryBackButton.astro";
+import StyledHr from "~/components/StyledHr.astro";
 
 export const prerender = true;
 
@@ -23,7 +25,6 @@ type Props = {
 
 const { post } = Astro.props;
 
-const posts = await getCollection("blog");
 const { data, render } = post;
 const { Content } = await render();
 
@@ -48,13 +49,16 @@ const placeholderGradient = `var(--gradient-${
 	<div class="container">
 		{
 			coverImage ? (
-				<img
+				<Picture
 					src={coverImage.src}
-					width={coverImage.width}
-					height={coverImage.height}
+					alt={data.coverImageAlt ?? ""}
+					sizes="(max-width: 1024px) 100vw, 1024px"
+					widths={[240, 360, 480, 768, 1024]}
+					aspectRatio="16:9"
+					fit="cover"
+					position="entropy"
 					loading="lazy"
 					decoding="async"
-					alt={data.coverImageAlt}
 				/>
 			) : (
 				<div class="placeholder-gradient" />
@@ -83,7 +87,7 @@ const placeholderGradient = `var(--gradient-${
 				}
 			</div>
 		</header>
-		<hr />
+		<StyledHr rand />
 		<article class="prose">
 			<Content />
 		</article>
@@ -102,40 +106,35 @@ const placeholderGradient = `var(--gradient-${
 		text-align: center;
 		max-inline-size: min(var(--size-content-3), 80vi);
 		border-radius: var(--radius-2);
+		margin-block-start: calc(-1 * var(--size-10));
+		@media (--sm-n-above) {
+			margin-block-start: calc(-1 * var(--size-11));
+		}
+		@media (--lg-n-above) {
+			margin-block-start: calc(-1 * var(--size-12));
+		}
 	}
 	img,
 	div.placeholder-gradient {
 		position: relative;
-		aspect-ratio: var(--ratio-square);
-		object-fit: cover;
-		box-shadow: var(--shadow-2);
 		z-index: -1;
-		clip-path: circle(150% at center -60%);
+		/* clip-path: circle(200% at 50% -190%); */
+		clip-path: ellipse(1362px 1600px at 50% calc(100% - 1600px));
 		max-inline-size: 100vi;
 		inset-inline-start: 50%;
 		inset-inline-end: 50%;
 		margin-left: -50vi;
 		margin-right: -50vi;
-		margin-block-end: calc(-1 * var(--size-12));
-		@media (--sm-n-above) {
-			margin-block-end: calc(-1 * var(--size-11));
-			aspect-ratio: var(--ratio-landscape);
-			clip-path: circle(200% at center -130%);
-		}
 		@media (--md-n-above) {
-			aspect-ratio: var(--ratio-golden);
-			clip-path: circle(200% at center -170%);
+			clip-path: ellipse(3000px 2000px at 50% calc(100% - 2000px));
 		}
 		@media (--lg-n-above) {
-			aspect-ratio: var(--ratio-widescreen);
 			inline-size: 100%;
 			max-inline-size: initial;
 			inset-inline-start: initial;
 			inset-inline-end: initial;
 			margin-left: 0;
 			margin-right: 0;
-			clip-path: circle(200% at center -200%);
-			margin-block-end: calc(-1 * var(--size-12));
 		}
 	}
 	div.placeholder-gradient {

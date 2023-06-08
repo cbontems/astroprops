@@ -41,7 +41,7 @@
 
 		& li {
 			&:before {
-				content: "➜";
+				content: "⁃";
 				display: inline-block;
 				color: var(--brand);
 				inline-size: var(--size-2);

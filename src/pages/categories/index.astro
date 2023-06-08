@@ -7,6 +7,7 @@ import HistoryBackButton from "~/components/HistoryBackButton.astro";
 
 import { getCategories } from "~/helpers/categories";
 import Search from "~/components/Search.astro";
+import StyledHr from "~/components/StyledHr.astro";
 
 const posts = await getCollection("blog");
 
@@ -29,7 +30,7 @@ const placeholderGradient = `var(--gradient-${
 			<h1>All Categories</h1>
 			<p>Search posts by category.</p>
 		</header>
-		<hr />
+		<StyledHr rand />
 
 		<ul>
 			{
@@ -118,12 +119,5 @@ const placeholderGradient = `var(--gradient-${
 		font-family: var(--font-mono);
 		color: var(--text-2);
 		opacity: 0.7;
-	}
-	hr {
-		margin-inline: var(--size-9);
-		margin-block-start: var(--size-4);
-		margin-block-end: var(--size-9);
-		background-color: var(--link);
-		opacity: 0.2;
 	}
 </style>
